@@ -1,38 +1,94 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  background-color: red;
+}
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+.App-header {
+  background-color: rgb(126, 124, 124);
+  height: 25vh;
+}
+.App-body {
+  display: flex;
+  flex-direction: column;
+  height: 75vh;
+}
+.App-row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0px;
+  margin: 0px;
+  border-width: 0px;
+  box-sizing: border-box;
+}
+.zero {
+  width: 50px;
+  display: flex;
+}
+.button {
+  width: calc(100vw / 4) !important;
+  max-width: 25vw !important;
+  height: calc(75vh / 5);
+  background-color: rgb(167, 164, 164);
+  display: flex;
+
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 0px;
+  margin: 0px;
+  border-width: 0px;
+  font-size: larger;
+  font-weight: bolder;
+  border-color: rgb(224, 211, 211);
+  border-width: 1px;
+  border-style: inset;
 }
+.buttons2 {
+  width: calc(100vw / 4) !important;
+  max-width: 25vw !important;
+  height: calc(75vh / 5);
+  background-color: rgb(241, 122, 11);
+  display: flex;
 
-.App-link {
-  color: #61dafb;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  margin: 0px;
+  border-width: 0px;
+  font-size: larger;
+  font-weight: bolder;
+  border-color: rgb(224, 211, 211);
+  border-width: 1px;
+  border-style: inset;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button :hover {
+  box-shadow: none;
+}
+.button:hover,
+element:active {
+  box-shadow: 0 0 5px rgb(167, 164, 164), inset 0 0 5px rgb(112, 104, 104);
+}
+buttons2 :hover {
+  box-shadow: none;
+}
+.buttons2:hover,
+element:active {
+  box-shadow: 0 0 5px rgb(241, 122, 11), inset 0 0 5px rgb(112, 104, 104);
+}
+.indiv {
+  font-size: 60px;
+}
+.outdiv {
+  font-size: 110px;
 }
