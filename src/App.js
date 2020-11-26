@@ -8,10 +8,31 @@ class App extends React.Component {
   state = {
     userInput: "",
     userOutput: "0",
+    a: 0,
+    b: 0,
+    op: "",
+    selectedOp: false,
   };
 
-  updateUserInput = (x) => {
-    const { userInput } = this.state;
+  updateUserInput = async (x) => {
+    const { userOutput, userInput, a, b, op, selectedOp } = this.state;
+
+    if (x == "+" || x == "-" || x == "/" || x == "×") {
+      if (selectedOp) {
+        await this.calculate();
+        this.setState({
+          op: x,
+          selectedOp: false,
+          userInput: this.state.userOutput,
+        });
+      } else {
+        this.setState({
+          op: x,
+          selectedOp: true,
+        });
+      }
+    }
+
     this.setState({ userInput: this.state.userInput + x });
   };
 
